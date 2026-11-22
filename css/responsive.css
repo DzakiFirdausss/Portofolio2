@@ -1,0 +1,154 @@
+/**
+ * Responsive Media Queries
+ * Graphic Designer Portfolio - Dark Editorial
+ */
+
+/* ==========================================================================
+   Tablet & Medium Viewports (max-width: 1024px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .philosophy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-details-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* ==========================================================================
+   Mobile & Small Viewports (max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 4rem;
+  }
+
+  /* Navigation adjustments */
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-actions .btn-primary {
+    display: none; /* Inquire button moved inside mobile drawer */
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions .btn,
+  .quick-copy-email {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-role-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  /* Archive Grid */
+  .archive-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .filter-bar {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--space-3);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0;
+  }
+
+  /* Clients Grid */
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Philosophy */
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Modal Dialog */
+  .modal-dialog {
+    max-height: 94vh;
+  }
+
+  .modal-body {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .modal-header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  /* Contact & Footer */
+  .contact-card {
+    padding: var(--space-6);
+  }
+
+  .contact-meta-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+/* ==========================================================================
+   Ultra-small phones (max-width: 420px)
+   ========================================================================== */
+
+@media (max-width: 420px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .toast-notification {
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
+    justify-content: center;
+  }
+}

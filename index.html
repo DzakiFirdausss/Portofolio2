@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Dzaki Firdaus — Graphic Designer & Visual Systems</title>
+  <meta name="description" content="Portfolio of Dzaki Firdaus — Graphic Designer specializing in brand identity, packaging systems, editorial publications, and typography." />
+  <meta name="author" content="Dzaki Firdaus" />
+  <meta name="theme-color" content="#0E1013" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dzaki Firdaus — Graphic Designer & Visual Systems" />
+  <meta property="og:description" content="Distinctive brand identities, tactile packaging systems, and editorial visuals with razor-sharp typographic discipline." />
+
+  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Clean Minimalist Inline Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E1013'/%3E%3Cpath d='M8 8h10a6 6 0 0 1 0 12H8z' stroke='%23A3E635' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='23' cy='22' r='2' fill='%23A3E635'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & TOP NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      
+      <!-- Monogram Brand Mark -->
+      <a href="#top" class="brand-mark" aria-label="Dzaki Firdaus Portfolio Top">
+        <svg class="brand-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="4" fill="#16191F" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+          <path d="M9 8h8a6 6 0 0 1 0 12H9V8z" stroke="#A3E635" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <line x1="9" y1="20" x2="9" y2="24" stroke="#F3F4F6" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="21" cy="22" r="1.5" fill="#A3E635" />
+        </svg>
+        <div class="brand-identity">
+          <span class="brand-name">Dzaki Firdaus</span>
+          <span class="brand-sub">Graphic Design Archive</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links (Max 4-5 items) -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#work" class="nav-link" data-i18n="navWork">Karya</a>
+        <a href="#clients" class="nav-link" data-i18n="navClients">Klien</a>
+        <a href="#philosophy" class="nav-link" data-i18n="navPhilosophy">Prinsip</a>
+        <a href="#contact" class="nav-link" data-i18n="navContact">Kontak</a>
+      </nav>
+
+      <!-- Right Action Controls: Language Toggle & CTA -->
+      <div class="nav-actions">
+        <!-- Bilingual Toggle (ID | EN) -->
+        <div class="lang-toggle-wrap" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn active" data-lang="id" aria-label="Bahasa Indonesia">ID</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English Language">EN</button>
+        </div>
+
+        <!-- Primary Inquire CTA -->
+        <a href="#contact" class="btn btn-primary" data-i18n="navInquire">Diskusi Proyek</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay Navigation -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <a href="#work" class="mobile-nav-link">
+      <span data-i18n="navWork">Karya</span>
+      <span>// 01</span>
+    </a>
+    <a href="#clients" class="mobile-nav-link">
+      <span data-i18n="navClients">Klien</span>
+      <span>// 02</span>
+    </a>
+    <a href="#philosophy" class="mobile-nav-link">
+      <span data-i18n="navPhilosophy">Prinsip</span>
+      <span>// 03</span>
+    </a>
+    <a href="#contact" class="mobile-nav-link">
+      <span data-i18n="navContact">Kontak</span>
+      <span>// 04</span>
+    </a>
+    <div style="padding-top: var(--space-4);">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;" data-i18n="navInquire">Diskusi Proyek</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main id="top">
+
+    <!-- ========================================================================
+         HERO SECTION: Text Scramble, Positioning & Value Statement
+         ======================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-grid-lines"></div>
+      <div class="container">
+        <div class="hero-content">
+          
+          <!-- Availability Status Pill -->
+          <div class="hero-meta-row">
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              <span data-i18n="heroStatus">Tersedia untuk Proyek Q1–Q2</span>
+            </div>
+            <span class="tag-pill" data-i18n="designerFocus">[ Identitas Merek • Kemasan • Sistem Visual ]</span>
+          </div>
+
+          <!-- Hero Name & Title with Text Scramble Effect -->
+          <div class="hero-title-group">
+            <h1 class="hero-name" id="hero-title">
+              <span id="hero-designer-name" class="scramble-text" data-i18n="designerName">DZAKI FIRDAUS</span>
+            </h1>
+
+            <div class="hero-role-wrapper">
+              <h2 class="hero-role">
+                <span id="hero-designer-role" class="scramble-text" data-i18n="designerRole">Graphic Designer</span>
+              </h2>
+              <span class="hero-role-sub">// Independent Studio Practice</span>
+            </div>
+          </div>
+
+          <!-- Grounded Editorial Value Statement (Strictly No AI Slop) -->
+          <p class="hero-statement" data-i18n="heroStatement" data-i18n-html="true">
+            Merancang <strong>identitas merek yang distingtif</strong>, kemasan bernilai taktil, dan sistem visual editorial dengan disiplin tipografi yang tajam serta kejelasan fungsional.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary" data-i18n="heroCtaArchive">Eksplorasi Arsip</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="heroCtaContact">Hubungi Langsung</a>
+            
+            <!-- Friction-free Copy Email Button -->
+            <button type="button" class="quick-copy-email" id="hero-copy-email-btn" data-email="hello@dzakifirdaus.design" title="Salin Email ke Clipboard">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span data-i18n="heroCopyEmail">Salin Email</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SELECTED CLIENTS & NICHES
+         ======================================================================== -->
+    <section class="section-padding clients-section" id="clients" aria-labelledby="clients-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="section-header-row">
+            <h2 class="section-title" id="clients-heading">
+              <span class="section-num" data-i18n="clientsHeadingNum">01</span>
+              <span data-i18n="clientsHeadingTitle">Klien & Kolaborasi</span>
+            </h2>
+            <p class="section-desc" data-i18n="clientsSubtitle">
+              Merek independen, studio arsitektur, dan lini produk gaya hidup.
+            </p>
+          </div>
+        </header>
+
+        <!-- Dynamic Grid of Client Logo Cards (With clean SVG fallbacks) -->
+        <div class="clients-grid" id="clients-grid-container">
+          <!-- Populated by js/app.js from CLIENTS_DATA -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         DISCIPLINE MARQUEE (Pure CSS Infinite Loop)
+         ======================================================================== -->
+    <div class="marquee-container" aria-label="Design Disciplines Marquee">
+      <div class="marquee-track">
+        
+        <!-- Track Group 1 -->
+        <div class="marquee-group">
+          <span class="marquee-item">IDENTITAS MEREK <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">DESAIN KEMASAN & DIELINE <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SISTEM TIPOGRAFI <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">EDITORIAL & CETAK MONOGRAF <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">ARAHAN SENI VISUAL <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SISTEM KISI SOSIAL MEDIA <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SIGNAGE & WAYFINDING <span class="marquee-glyph">✦</span></span>
+        </div>
+
+        <!-- Track Group 2 (Duplicate for seamless infinite scroll) -->
+        <div class="marquee-group" aria-hidden="true">
+          <span class="marquee-item">IDENTITAS MEREK <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">DESAIN KEMASAN & DIELINE <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SISTEM TIPOGRAFI <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">EDITORIAL & CETAK MONOGRAF <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">ARAHAN SENI VISUAL <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SISTEM KISI SOSIAL MEDIA <span class="marquee-glyph">✦</span></span>
+          <span class="marquee-item">SIGNAGE & WAYFINDING <span class="marquee-glyph">✦</span></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         CURATED DESIGN ARCHIVE & FOCUS MODE
+         ======================================================================== -->
+    <section class="section-padding archive-section" id="work" aria-labelledby="archive-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="section-header-row">
+            <h2 class="section-title" id="archive-heading">
+              <span class="section-num" data-i18n="archiveHeadingNum">02</span>
+              <span data-i18n="archiveHeadingTitle">Arsip Karya Terpilih</span>
+            </h2>
+            <p class="section-desc" data-i18n="archiveSubtitle">
+              Kurasi proyek desain grafis dengan fokus pada ketajaman konseptual dan eksekusi produksi.
+            </p>
+          </div>
+        </header>
+
+        <!-- Category Filter Bar with Dynamic Count Indicators -->
+        <nav class="filter-bar" aria-label="Filter Projects by Discipline">
+          <button type="button" class="filter-btn active" data-filter="all">
+            <span data-i18n="filterAll">Semua</span>
+            <span class="filter-count">[06]</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="branding">
+            <span data-i18n="filterBranding">Identitas Merek</span>
+            <span class="filter-count">[02]</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="packaging">
+            <span data-i18n="filterPackaging">Kemasan</span>
+            <span class="filter-count">[02]</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="editorial">
+            <span data-i18n="filterEditorial">Editorial & Cetak</span>
+            <span class="filter-count">[01]</span>
+          </button>
+          <button type="button" class="filter-btn" data-filter="social">
+            <span data-i18n="filterSocial">Visual Sosial</span>
+            <span class="filter-count">[01]</span>
+          </button>
+        </nav>
+
+        <!-- Project Grid (Populated dynamically from PROJECTS_DATA) -->
+        <div class="archive-grid" id="archive-grid-container">
+          <!-- Populated by js/app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         DESIGN PHILOSOPHY & DISCIPLINE
+         ======================================================================== -->
+    <section class="section-padding philosophy-section" id="philosophy" aria-labelledby="philosophy-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <div class="section-header-row">
+            <h2 class="section-title" id="philosophy-heading">
+              <span class="section-num" data-i18n="philoHeadingNum">03</span>
+              <span data-i18n="philoHeadingTitle">Prinsip Desain Grafis</span>
+            </h2>
+            <p class="section-desc" data-i18n="philoSubtitle">
+              Fondasi kerja yang mengutamakan substansi, proporsi, dan daya tahan visual.
+            </p>
+          </div>
+        </header>
+
+        <div class="philosophy-grid">
+          
+          <article class="philosophy-card">
+            <span class="philosophy-num">PRINSIP // 01</span>
+            <h3 class="philosophy-heading" data-i18n="philo1Title">Disiplin Grid & Tipografi Tajam</h3>
+            <p class="philosophy-text" data-i18n="philo1Text">
+              Tipografi bukan sekadar elemen hiasan—ia adalah suara visual utama. Setiap spasi, kerning, dan hierarki grid dibangun secara sadar untuk menyampaikan karakter brand tanpa kompromi.
+            </p>
+          </article>
+
+          <article class="philosophy-card">
+            <span class="philosophy-num">PRINSIP // 02</span>
+            <h3 class="philosophy-heading" data-i18n="philo2Title">Materialitas & Nilai Taktil Kemasan</h3>
+            <p class="philosophy-text" data-i18n="philo2Text">
+              Kemasan adalah jembatan fisik antara brand dan manusia. Pemilihan kertas, finishing cetak, dan ketepatan die-line dipikirkan secara matang dari layar hingga meja produksi.
+            </p>
+          </article>
+
+          <article class="philosophy-card">
+            <span class="philosophy-num">PRINSIP // 03</span>
+            <h3 class="philosophy-heading" data-i18n="philo3Title">Sistem Visual yang Tahan Lama</h3>
+            <p class="philosophy-text" data-i18n="philo3Text">
+              Menolak tren musiman yang lekas usang. Kami membangun aset visual terstruktur dan pedoman merek komprehensif yang siap berekspansi di masa depan.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT SECTION: Direct Friction-Free Channels & Local Clock
+         ======================================================================== -->
+    <section class="section-padding contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        
+        <div class="contact-card">
+          
+          <!-- Left: Editorial Invitation -->
+          <div class="contact-left">
+            <span class="meta-label">
+              <span data-i18n="contactHeadingNum">04</span> // INQUIRIES & COLLABORATIONS
+            </span>
+            <h2 class="contact-heading" id="contact-heading" data-i18n="contactHeading">
+              Mulai Dialog Visual Baru.
+            </h2>
+            <p class="contact-subtext" data-i18n="contactSubtext">
+              Terbuka untuk konsultasi identitas merek, desain kemasan, dan proyek kolaboratif terpilih.
+            </p>
+            
+            <div style="padding-top: var(--space-2);">
+              <a href="mailto:hello@dzakifirdaus.design" class="btn btn-primary" data-i18n="heroCtaContact">
+                Hubungi Langsung
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Direct Channels & Timezone -->
+          <div class="contact-right">
+            
+            <div class="contact-channels-list">
+              
+              <!-- Direct Email Channel with Copy Trigger -->
+              <a href="mailto:fdzaki42@gmail.com" class="contact-channel-item" id="contact-copy-email-btn" data-email="fdzaki42@gmail.com" title="Klik untuk salin email">
+                <span class="contact-channel-label">
+                  <svg class="contact-channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <span data-i18n="contactEmailLabel">Surat Elektronik</span>
+                </span>
+                <span class="contact-channel-val">fdzaki42@gmail.com</span>
+              </a>
+
+              <!-- WhatsApp Direct Channel -->
+              <a href="https://wa.me/6281234567890?text=Halo%20Dzaki,%20saya%20tertarik%20berdiskusi%20mengenai%20proyek%20desain%20grafis." target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <span class="contact-channel-label">
+                  <svg class="contact-channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                  <span data-i18n="contactWaLabel">WhatsApp Direct</span>
+                </span>
+                <span class="contact-channel-val">+62 853-1417-0556</span>
+              </a>
+
+              <!-- Instagram Channel -->
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
+                <span class="contact-channel-label">
+                  <svg class="contact-channel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span data-i18n="contactIgLabel">Instagram Studio</span>
+                </span>
+                <span class="contact-channel-val">XYZ Studio</span>
+              </a>
+
+            </div>
+
+            <!-- Timezone & Live Jakarta Clock -->
+            <div class="contact-meta-footer">
+              <span data-i18n="contactLocation">Banda Aceh, Indonesia (WIB)</span>
+              <div class="live-clock-badge">
+                <span class="clock-indicator"></span>
+                <span id="live-clock-time">--:--:-- WIB (UTC+7)</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <span>© 2026 Dzaki Firdaus. </span>
+          <span data-i18n="footerRights">Hak Cipta Dilindungi Undang-Undang.</span>
+        </div>
+        <div>
+          <span>Crafted with semantic HTML, pure CSS & vanilla JS.</span>
+        </div>
+        <button type="button" class="footer-back-to-top" id="back-to-top-btn">
+          <span data-i18n="footerTop">Kembali ke Atas ↑</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FOCUS / INSPECT PROJECT MODAL (Accessible Dialog)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-project-title">
+    <div class="modal-dialog">
+      
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="meta-label" data-i18n="modalDossier">DOSSIER PROYEK</span>
+          <span style="color: var(--border-medium);">/</span>
+          <span id="modal-meta-index" style="color: var(--accent-primary);">REF // 01</span>
+          <span style="color: var(--border-medium);">/</span>
+          <span id="modal-meta-client" style="color: var(--text-secondary);">Karsa</span>
+          <span style="color: var(--border-medium);">/</span>
+          <span id="modal-meta-year" style="color: var(--text-muted);">2025</span>
+        </div>
+
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Tutup modal" title="Tutup (Esc)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        
+        <!-- Large Media Viewer Slot -->
+        <div class="modal-media-viewer" id="modal-media-container">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Details Grid -->
+        <div class="modal-details-grid">
+          
+          <!-- Narrative Side -->
+          <div class="modal-narrative">
+            <h3 class="modal-project-title" id="modal-project-title">Judul Proyek</h3>
+            
+            <div class="modal-spec-block">
+              <span class="meta-label" data-i18n="modalBriefHeading">Tantangan & Brief Proyek</span>
+              <p class="modal-brief-box" id="modal-project-brief">
+                Deskripsi brief proyek...
+              </p>
+            </div>
+          </div>
+
+          <!-- Specifications Side -->
+          <div class="modal-sidebar">
+            
+            <!-- Deliverables List -->
+            <div class="modal-spec-block">
+              <span class="meta-label" data-i18n="modalDeliverablesHeading">Deliverables & Output</span>
+              <div class="deliverables-list" id="modal-deliverables-list">
+                <!-- Tags populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Clickable Interactive Color Swatches -->
+            <div class="modal-spec-block">
+              <span class="meta-label" data-i18n="modalPaletteHeading">Palet Warna (Klik untuk Salin HEX)</span>
+              <div class="swatch-grid" id="modal-swatch-grid">
+                <!-- Swatches populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Documentation Link -->
+            <div style="padding-top: var(--space-2);">
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-external-link" style="width: 100%;">
+                <span data-i18n="modalExternalLink">Dokumentasi Lengkap</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION PILL
+       ========================================================================== -->
+  <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+    <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toast-message">Tersalin ke clipboard</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/scramble.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
