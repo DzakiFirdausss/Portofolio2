@@ -76,7 +76,7 @@ const I18N = {
     contactEmailLabel: "Surat Elektronik",
     contactWaLabel: "WhatsApp Direct",
     contactIgLabel: "Instagram Studio",
-    contactLocation: "Jakarta, Indonesia (WIB)",
+    contactLocation: "Banda Aceh, Indonesia (WIB)",
     contactRateCard: "Unduh Spec Sheet / PDF",
 
     // Footer
@@ -160,7 +160,7 @@ const I18N = {
     contactEmailLabel: "Direct Email",
     contactWaLabel: "WhatsApp Direct",
     contactIgLabel: "Instagram Studio",
-    contactLocation: "Jakarta, Indonesia (WIB)",
+    contactLocation: "Banda Aceh, Indonesia (WIB)",
     contactRateCard: "Download Spec Sheet / PDF",
 
     // Footer
@@ -193,7 +193,7 @@ class Localization {
     this.currentLang = lang;
     localStorage.setItem(this.storageKey, lang);
     document.documentElement.lang = lang;
-    this.updateDOM();
+    this.updateDOM(false);
     
     // Dispatch custom event so other components (Scrambler, Projects) can react
     window.dispatchEvent(new CustomEvent("languageChanged", { detail: { lang } }));
@@ -208,7 +208,7 @@ class Localization {
     return str;
   }
 
-  updateDOM() {
+  updateDOM(isInitial = false) {
     // Update elements with data-i18n attribute
     const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach(el => {
@@ -217,6 +217,8 @@ class Localization {
       if (translation) {
         if (el.hasAttribute("data-i18n-html")) {
           el.innerHTML = translation;
+        } else if (!isInitial && el.hasAttribute("data-decode-text") && window.Motion && window.Motion.hasTextPlugin) {
+          window.Motion.decodeText(el, translation, { duration: 0.45 });
         } else {
           el.textContent = translation;
         }

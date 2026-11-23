@@ -452,11 +452,19 @@
   background-color: var(--bg-surface-elevated);
 }
 
-/* Scramble effect text target */
+/* Scramble & TextPlugin target elements: zero layout shift */
 .scramble-text {
   position: relative;
   display: inline-block;
-  min-height: 1.1em;
+  min-height: 1.15em;
+  line-height: 1.05;
+  vertical-align: bottom;
+  contain: layout;
+}
+
+[data-decode-text] {
+  display: inline-block;
+  contain: layout;
 }
 
 /* ==========================================================================

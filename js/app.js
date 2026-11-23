@@ -4,11 +4,17 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Initialize Localization
+  // 1. Initialize Localization (initial pass without animation)
   const i18n = window.i18n;
-  i18n.updateDOM();
+  i18n.updateDOM(true);
 
-  // 2. Setup Hero Text Scramblers
+  // 2. Initialize GSAP Editorial Motion & Scroll Triggers
+  if (window.Motion) {
+    window.Motion.initHeroEntrance();
+    window.Motion.initScrollReveals();
+  }
+
+  // 3. Setup Hero Text Scramblers
   const nameEl = document.getElementById("hero-designer-name");
   const roleEl = document.getElementById("hero-designer-role");
 
@@ -195,6 +201,11 @@ function renderProjects(category = "all", triggerRevealAnimation = true) {
   }).join("");
 
   container.innerHTML = html;
+
+  // Animate cards with GSAP if Motion engine is available
+  if (triggerRevealAnimation && window.Motion) {
+    window.Motion.animateCards(container.querySelectorAll(".project-card"));
+  }
 
   // Re-attach click listeners to new cards
   container.querySelectorAll(".project-card").forEach(card => {
@@ -385,6 +396,11 @@ function openProjectModal(projectId) {
   modalBackdrop.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 
+  const dialog = modalBackdrop.querySelector(".modal-dialog");
+  if (window.Motion) {
+    window.Motion.animateModalOpen(dialog);
+  }
+
   // Focus close button for accessibility
   const closeBtn = document.getElementById("modal-close-btn");
   if (closeBtn) {
@@ -450,15 +466,20 @@ function showToast(message) {
   if (!toast || !toastMsg) return;
 
   toastMsg.textContent = message;
-  toast.classList.add("show");
 
-  if (toastTimeout) {
-    clearTimeout(toastTimeout);
+  if (window.Motion) {
+    window.Motion.animateToast(toast);
+  } else {
+    toast.classList.add("show");
+
+    if (toastTimeout) {
+      clearTimeout(toastTimeout);
+    }
+
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 2600);
   }
-
-  toastTimeout = setTimeout(() => {
-    toast.classList.remove("show");
-  }, 2600);
 }
 
 function setupClipboardActions() {
@@ -483,7 +504,7 @@ function setupClipboardActions() {
 }
 
 /* ==========================================================================
-   Live Timezone Clock (Jakarta WIB / UTC+7)
+   Live Timezone Clock (Banda Aceh WIB / UTC+7)
    ========================================================================== */
 
 function setupLiveClock() {
@@ -492,7 +513,7 @@ function setupLiveClock() {
 
   function updateClock() {
     const now = new Date();
-    // Format to Asia/Jakarta time
+    // Format to Asia/Jakarta IANA timezone (representing WIB / UTC+7 for Banda Aceh)
     try {
       const timeStr = now.toLocaleTimeString("en-GB", {
         timeZone: "Asia/Jakarta",
